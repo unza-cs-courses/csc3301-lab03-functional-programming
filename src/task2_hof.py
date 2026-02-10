@@ -27,6 +27,24 @@ def my_zip_with(func: Callable[[T, U], Any], iter1: Iterator[T], iter2: Iterator
     # YOUR CODE HERE
     pass
 
+def compose(*funcs: Callable) -> Callable:
+    """Compose functions right-to-left: compose(f, g)(x) = f(g(x))
+
+    Args:
+        *funcs: Two or more functions to compose
+
+    Returns:
+        A new function that applies the input functions from right to left
+
+    Example:
+        double = lambda x: x * 2
+        increment = lambda x: x + 1
+        composed = compose(double, increment)
+        composed(5) == 12  # double(increment(5))
+    """
+    # TODO: Implement function composition
+    raise NotImplementedError("compose not yet implemented")
+
 # Tests
 if __name__ == "__main__":
     # Test my_map
