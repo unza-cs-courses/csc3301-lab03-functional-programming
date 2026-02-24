@@ -67,7 +67,6 @@ pytest tests/visible/ -v --tb=long
 │   └── generate_assignment.py # Creates personalized assignment
 ├── .github/
 │   └── workflows/
-│       ├── autograding.yml   # Runs tests on push
 │       └── generate-variant.yml # Generates variant on repo creation
 ├── ASSIGNMENT_TEMPLATE.md    # Template for personalized assignment
 ├── ASSIGNMENT.md             # Your personalized assignment (generated)
@@ -142,9 +141,10 @@ If no variant configuration exists, sensible defaults are used.
 ## Submission Guidelines
 
 1. Implement all functions in `src/task2_hof.py`
-2. Ensure all visible tests pass locally
-3. Push your changes to trigger the autograder
-4. Check GitHub Actions for your score
+2. Run all visible tests locally and ensure they pass: `pytest tests/visible/ -v`
+3. Push your code to your repository before the deadline
+
+**Note:** Testing is local-only. There is no automatic feedback when you push -- you must run the tests yourself before submitting.
 
 ## Tips
 
